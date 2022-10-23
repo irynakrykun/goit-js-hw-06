@@ -6,8 +6,9 @@ inputEl.addEventListener('blur', onChangeFocus)
 function onChangeFocus(evt){
 console.log(evt)
     
-    if (evt.currentTarget.value.length == inputEl.getAttribute('data-length')) {
+    if (evt.currentTarget.value.length === Number(inputEl.getAttribute('data-length'))) {
         inputEl.classList.add('valid')
+        inputEl.classList.remove('invalid')
         
         
     } else  {
