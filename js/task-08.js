@@ -10,8 +10,9 @@ function onCheckForm(evt) {
      } = evt.currentTarget;
     
   if (email.value === "" || password.value === "") {
-     alert("Всі поля повинні бути заповненні!!!");
+    return alert("Всі поля повинні бути заповненні!!!");
   }
+   
 
   console.log(`Login: ${email.value}, Password: ${password.value}`);
   evt.currentTarget.reset();
